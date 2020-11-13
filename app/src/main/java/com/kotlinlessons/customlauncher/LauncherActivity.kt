@@ -2,10 +2,11 @@ package com.kotlinlessons.customlauncher
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import com.kotlinlessons.customlauncher.fragments.LauncherFragment
 
-class LauncherActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+class LauncherActivity : SingleFragmentActivity() {
+
+    override fun createFragment(): Fragment = LauncherFragment.newInstance()
+
 }
